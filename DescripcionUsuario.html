@@ -4,31 +4,40 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Descripción</title>
+	  <title>Descripción</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/des.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
+    <link rel="icon" href="https://vignette1.wikia.nocookie.net/pokemonhda/images/d/d2/By%3BSophiieTutoriiales_%285%29.ico/revision/latest?cb=20121218025908&path-prefix=es">
   </head>
   <body>
     <div class="container ">
       <div class="row" >
 
           <div class="col-md-7">
-              <h3>Descripción</h3>
-              <form action="" method="POST" id="formulario">
-                <label for="">Nombre</label>
-                
-                <input type="text" id="nombre" name="nombre" placeholder="nombre" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-                
-                <div id="sugerenciaNombre"></div>
+              <h3>Description</h3>
 
-                <label for="">Correo</label>
-                <input type="text" id="correo" name="correo" placeholder="user@mail.com">
+              <form action="" method="POST" id="formulario">
+               
+                <div class="" id="containerInput"><!-- add when validates :form-group has-success-->
+
+                    <label class="" for="" id="label">Name</label> <!-- add when validates :form-control-label -->
+                    
+                    <input type="text" class="" id="nombre" name="nombre" placeholder="nombre" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> <!-- add when validates :f -->         
+               
+                </div>
                 
-                <label for="">Descripcion</label>
+                <div id="containerEmail">
+
+                  <label id="lbl2" for="">Email</label>
+
+                  <input type="text" id="correo" name="correo" placeholder="user@mail.com">
+                
+                </div>
+                
+                <label for="">Briefly Description</label>
                 <textarea  id="area"></textarea>
-            
+              
                 <button class="btn btn-success" type="button" id="boton" data-container="body" data-toggle="popover" data-placement="right" data-content="Esta mierda no se muestra">Guardar</button>
               </form>
 				

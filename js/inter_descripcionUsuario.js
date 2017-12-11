@@ -16,18 +16,45 @@ function validarEmail(email) {
 function mostrarErrorNombre(texto,advertencia){
 
 	if(!(validarTexto(texto))){
+
+		$('#containerInput').addClass('form-group has-danger');
+		$('#label').addClass('form-control-label');
+		$('#nombre').addClass('form-control form-control-danger');
+		
 		document.getElementById('error_nombre').innerHTML = advertencia;
+	
 	}else{
+
+		$('#containerInput').removeClass('form-group has-danger');
+		$('#label').removeClass('form-control-label');
+		$('#nombre').removeClass('form-control form-control-danger');
+		
+		$('#containerInput').addClass('form-group has-success');
+		$('#label').addClass('form-control-label');
+		$('#nombre').addClass('form-control form-control-success');
+		
 		document.getElementById('error_nombre').innerHTML = "";
 	}
-
 }
 
 function mostrarErrorEmail(texto,advertencia){
 
 	if(!(validarEmail(texto))){
+		$('#containerEmail').addClass('form-group has-danger');
+		$('#lbl2').addClass('form-control-label');
+		$('#correo').addClass('form-control form-control-danger');
+		
 		document.getElementById('error_correo').innerHTML = advertencia;
 	}else{
+
+		$('#containerEmail').removeClass('form-group has-danger');
+		$('#lbl2').removeClass('form-control-label');
+		$('#correo').removeClass('form-control form-control-danger');
+		
+		$('#containerEmail').addClass('form-group has-success');
+		$('#lbl2').addClass('form-control-label');
+		$('#correo').addClass('form-control form-control-success');
+		
 		document.getElementById('error_correo').innerHTML = "";
 	}
 
@@ -43,8 +70,3 @@ campoEmail.addEventListener('blur',function(){
 	var email = document.getElementById('correo').value;
 	mostrarErrorEmail(email,'<div class="alert alert-danger" role="danger"><strong>Email Incorrecto!</strong> Por favor, ingrese nuevamente su correo.</div>');
 });
-
-/*
-function mostrarSugerencia(){
-	document.getElementById('sugerenciaNombre').innerHTML = '<div class="alert alert-warning" role="alert"><strong>Por Favor! </strong> Ingresa tu nombre real.</div>';
-}*/
